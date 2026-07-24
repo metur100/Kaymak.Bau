@@ -1,0 +1,116 @@
+:root {
+  --bg: #f5f1e8;
+  --bg-alt: #e9dfd3;
+  --ink: #241913;
+  --ink-soft: #5c4a3f;
+  --muted: #8a7668;
+  --line: #d7c9ba;
+  --gold: #c67a3c;
+  --gold-dark: #9e5825;
+  --accent: #df9554;
+  --accent-soft: #f1c894;
+  --white: #ffffff;
+
+  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --maxw: 1240px;
+  --gap: clamp(1.25rem, 4vw, 2rem);
+  --radius: 4px;
+  --shadow: 0 20px 60px -30px rgba(28, 26, 23, 0.45);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background:
+    radial-gradient(circle at top left, rgba(215, 140, 80, 0.08), transparent 22%),
+    linear-gradient(180deg, #f7f4ee 0%, var(--bg) 28%, #f4efe6 100%);
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; color: var(--ink); }
+h1 { font-size: clamp(2.8rem, 6vw, 5rem); }
+h2 { font-size: clamp(2.2rem, 5vw, 3.6rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.7rem); }
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+ul { list-style: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+.container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gap); }
+
+.section { padding: clamp(4rem, 9vw, 8rem) 0; }
+.section--tight { padding: clamp(3rem, 6vw, 5rem) 0; }
+.section--alt { background: var(--bg-alt); }
+.section--dark { background: var(--ink); color: var(--bg); }
+.section--dark h1, .section--dark h2, .section--dark h3 { color: var(--bg); }
+
+/* Eyebrow / kicker */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.eyebrow::before { content: ''; width: 28px; height: 1px; background: var(--accent); display: inline-block; }
+
+.lead { font-size: clamp(1rem, 2vw, 1.16rem); color: var(--ink-soft); max-width: 52ch; }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.95rem 1.8rem;
+  font-weight: 600; font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  border-radius: 2px;
+  transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+}
+.btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.btn--primary { background: var(--ink); color: var(--bg); }
+.btn--primary:hover { background: var(--gold-dark); transform: translateY(-2px); }
+.btn--gold { background: var(--gold); color: #fff; }
+.btn--gold:hover { background: var(--gold-dark); transform: translateY(-2px); }
+.btn--ghost { border: 1px solid currentColor; color: var(--ink); background: rgba(255, 255, 255, 0.26); }
+.btn--ghost:hover { background: var(--ink); color: var(--bg); }
+.btn--light { background: rgba(245, 241, 232, 0.92); color: var(--ink); }
+.btn--light:hover { background: var(--gold); color: #fff; }
+.btn__arrow { transition: transform 0.25s ease; }
+.btn:hover .btn__arrow { transform: translateX(4px); }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--reveal-delay, 0s); }
+.reveal.is-visible { opacity: 1; transform: none; }
+
+.grid { display: grid; gap: var(--gap); }
+
+.badge {
+  display: inline-block; padding: 0.35rem 0.8rem;
+  background: rgba(193, 124, 69, 0.12); color: var(--gold-dark);
+  font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  border-radius: 2px;
+}
+
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+@media (max-width: 700px) {
+  body { font-size: 16px; }
+  .container { padding: 0 1.25rem; }
+  .section { padding: clamp(3.5rem, 14vw, 5.25rem) 0; }
+}

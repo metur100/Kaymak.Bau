@@ -1,0 +1,50 @@
+.rf {
+  background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(1.6rem, 4vw, 2.6rem); box-shadow: var(--shadow); max-width: 640px; margin: 0 auto;
+}
+.rf__steps { display: flex; gap: 0.8rem; margin-bottom: 1.8rem; }
+.rf__dot {
+  width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--bg-alt); color: var(--muted); font-weight: 600; font-size: 0.9rem;
+  border: 1px solid var(--line); transition: all 0.3s ease;
+}
+.rf__dot.is-on { background: var(--gold); color: #fff; border-color: var(--gold); }
+
+.rf__panel { border: none; animation: rfIn 0.4s ease both; }
+@keyframes rfIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+.rf__legend { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 1.2rem; color: var(--ink); }
+
+.rf__checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin-bottom: 1.6rem; }
+.rf__check-item {
+  display: flex; align-items: center; gap: 0.65rem; padding: 0.8rem 1rem;
+  border: 1px solid var(--line); border-radius: 3px; cursor: pointer; font-size: 0.9rem;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+.rf__check-item:hover { border-color: var(--gold); }
+.rf__check-item.is-checked { border-color: var(--gold); background: rgba(184,134,59,0.08); }
+.rf__check-item input { accent-color: var(--gold); width: 18px; height: 18px; flex: none; }
+
+.rf__row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.rf__field { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1rem; }
+.rf__field span { font-size: 0.82rem; font-weight: 600; color: var(--ink-soft); }
+.rf__field input, .rf__field textarea {
+  padding: 0.8rem 0.9rem; border: 1px solid var(--line); border-radius: 3px;
+  font-family: inherit; font-size: 0.95rem; background: var(--bg); color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+.rf__field input:focus, .rf__field textarea:focus { outline: none; border-color: var(--gold); }
+.rf__field textarea { resize: vertical; }
+
+.rf__nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem; }
+.rf__next { margin-top: 0.4rem; }
+
+.rf--done { text-align: center; }
+.rf__check {
+  display: inline-grid; place-items: center; width: 60px; height: 60px; border-radius: 50%;
+  background: var(--gold); color: #fff; font-size: 1.8rem; margin-bottom: 1rem;
+}
+.rf__note { margin-top: 1.2rem; font-size: 0.82rem; color: var(--muted); font-style: italic; }
+
+@media (max-width: 560px) {
+  .rf__checks, .rf__row { grid-template-columns: 1fr; }
+}

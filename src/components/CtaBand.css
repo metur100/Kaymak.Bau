@@ -1,0 +1,18 @@
+.cta { background: var(--ink); color: var(--bg); padding: clamp(3.5rem, 8vw, 6rem) 0; position: relative; overflow: hidden; }
+.cta::before {
+  content: ''; position: absolute; top: -40%; right: -10%; width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(184,134,59,0.28), transparent 65%); pointer-events: none;
+}
+.cta__inner {
+  position: relative; z-index: 1;
+  display: flex; align-items: center; justify-content: space-between; gap: 2.5rem; flex-wrap: wrap;
+}
+.cta__eyebrow { color: var(--gold); margin-bottom: 1rem; }
+.cta__eyebrow::before { background: var(--gold); }
+.cta__title { color: var(--bg); max-width: 18ch; }
+.cta__text { margin-top: 1rem; color: rgba(246,243,236,0.8); max-width: 50ch; }
+.cta__btn { flex: none; }
+
+@media (max-width: 700px) {
+  .cta__btn { width: 100%; justify-content: center; }
+}
