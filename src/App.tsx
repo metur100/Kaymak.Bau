@@ -2,29 +2,31 @@ import { Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollProgress from './components/ScrollProgress'
 import Home from './pages/Home'
-import Leistungen from './pages/Leistungen'
-import LeistungDetail from './pages/LeistungDetail'
-import Referenzen from './pages/Referenzen'
-import ReferenzDetail from './pages/ReferenzDetail'
-import UeberUns from './pages/UeberUns'
-import Kontakt from './pages/Kontakt'
+import Services from './pages/Services'
+import ServiceDetail from './pages/ServiceDetail'
+import References from './pages/References'
+import ReferenceDetail from './pages/ReferenceDetail'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 
 export default function App() {
   return (
     <>
+      <ScrollProgress />
       <ScrollToTop />
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/leistungen" element={<Leistungen />} />
-          <Route path="/leistungen/:slug" element={<LeistungDetail />} />
-          <Route path="/referenzen" element={<Referenzen />} />
-          <Route path="/referenzen/:slug" element={<ReferenzDetail />} />
-          <Route path="/ueber-uns" element={<UeberUns />} />
-          <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/leistungen" element={<Services />} />
+          <Route path="/leistungen/:slug" element={<ServiceDetail />} />
+          <Route path="/referenzen" element={<References />} />
+          <Route path="/referenzen/:slug" element={<ReferenceDetail />} />
+          <Route path="/ueber-uns" element={<About />} />
+          <Route path="/kontakt" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

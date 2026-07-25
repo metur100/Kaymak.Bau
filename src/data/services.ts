@@ -4,36 +4,21 @@ export interface Service {
   short: string
   tagline: string
   intro: string
-  focus: boolean // Fokus-Hauptgewerk (große Kachel)
+  focus: boolean
   scope: string[]
-  benefits: { title: string; text: string }[]
   image: string
 }
-
-const local = (name: string) => `/${name}.jpeg`
 
 export const services: Service[] = [
   {
     slug: 'abdichtung',
     title: 'Abdichtung',
     short: 'Katja Sprint & Schweißbahn',
-    tagline: 'Der sichere Schutz gegen Bodenfeuchte.',
+    tagline: 'Sicherer Schutz gegen Bodenfeuchte.',
     focus: true,
-    intro:
-      'Eine dauerhaft trockene Basis ist die Grundlage jedes langlebigen Bodenaufbaus. Wir dichten Ihre Rohbetondecke fachgerecht gegen aufsteigende Feuchtigkeit ab – mit Katja-Sprint Abdichtungsbahn und Schweißbahn, sauber verschweißt und rissfrei.',
-    scope: [
-      'Untergrundprüfung & Vorbereitung',
-      'Verlegung Katja-Sprint Abdichtungsbahn',
-      'Schweißbahn-Systeme, flämmtechnisch verschweißt',
-      'Anschlüsse an Wände und Durchdringungen',
-      'Dokumentierte Dichtigkeitsprüfung',
-    ],
-    benefits: [
-      { title: 'Rissfrei', text: 'Materialgerechte Verlegung ohne Schwachstellen.' },
-      { title: 'Nach DIN', text: 'Ausführung normkonform und dokumentiert.' },
-      { title: 'Aus einer Hand', text: 'Abdichtung als Teil des Komplettaufbaus.' },
-    ],
-    image: local('1'),
+    intro: 'Trockene Basis für jeden Aufbau. Katja-Sprint Abdichtungsbahn & Schweißbahn – sauber verschweißt und rissfrei.',
+    scope: ['Untergrundprüfung', 'Katja-Sprint Abdichtungsbahn', 'Schweißbahn verschweißt', 'Wand- & Durchdringungsanschlüsse', 'Dichtigkeitsprüfung'],
+    image: '/3.jpeg',
   },
   {
     slug: 'waermedaemmung',
@@ -41,21 +26,9 @@ export const services: Service[] = [
     short: 'Dämmung & Verlegesysteme',
     tagline: 'Wärme bleibt, wo sie hingehört.',
     focus: true,
-    intro:
-      'Effiziente Dämmung senkt Ihre Heizkosten und schafft die perfekte Basis für die Fußbodenheizung. Wir verlegen Wärmedämmung mit Tackerplatte und Rolljet-Systemen präzise und lückenlos.',
-    scope: [
-      'Auswahl passender Dämmstärken',
-      'Verlegung Tackerplatten-System',
-      'Rolljet-Verlegesystem für schnelle Ausführung',
-      'Trittschall- & Wärmedämmung kombiniert',
-      'Vorbereitung für die Heizungsverlegung',
-    ],
-    benefits: [
-      { title: 'Effizient', text: 'Spürbar niedrigere Heizkosten.' },
-      { title: 'Lückenlos', text: 'Keine Wärmebrücken im Aufbau.' },
-      { title: 'Schnell', text: 'Rolljet für zügige Baustellen.' },
-    ],
-    image: local('3'),
+    intro: 'Effiziente Dämmung mit Tackerplatte und Rolljet – lückenlos verlegt als perfekte Basis für die Fußbodenheizung.',
+    scope: ['Passende Dämmstärken', 'Tackerplatten-System', 'Rolljet-Verlegesystem', 'Trittschall & Wärme kombiniert', 'Vorbereitung Heizung'],
+    image: '/4.jpeg',
   },
   {
     slug: 'fussbodenheizung',
@@ -63,43 +36,19 @@ export const services: Service[] = [
     short: 'Tacker-, Noppen- & Schlüter-BECOTEC',
     tagline: 'Behagliche Wärme aus dem Boden.',
     focus: true,
-    intro:
-      'Als zertifizierter Fachbetrieb für Schlüter-BECOTEC verlegen wir Fußbodenheizungen hocheffizient und gleichmäßig – ob Tackersystem, Noppensystem oder das flachaufbauende BECOTEC-System.',
-    scope: [
-      'Beratung zum passenden Heizsystem',
-      'Tackersystem für flexible Verlegung',
-      'Noppensystem für schnelle Fixierung',
-      'Schlüter-BECOTEC (geringe Aufbauhöhe)',
-      'Druckprüfung & Übergabeprotokoll',
-    ],
-    benefits: [
-      { title: 'Zertifiziert', text: 'Geprüfter Schlüter-BECOTEC Fachbetrieb.' },
-      { title: 'Effizient', text: 'Gleichmäßige Wärmeverteilung.' },
-      { title: 'Flach', text: 'Geringe Aufbauhöhe möglich.' },
-    ],
-    image: local('5'),
+    intro: 'Zertifizierter Schlüter-BECOTEC Fachbetrieb. Tacker-, Noppen- oder BECOTEC-System – hocheffizient und gleichmäßig.',
+    scope: ['Systemberatung', 'Tackersystem', 'Noppensystem', 'Schlüter-BECOTEC', 'Druckprüfung & Protokoll'],
+    image: '/5.jpeg',
   },
   {
     slug: 'estricharbeiten',
     title: 'Estricharbeiten',
     short: 'Zement- & Anhydritestrich',
-    tagline: 'Die tragfähige Schicht für Ihren Oberboden.',
+    tagline: 'Die tragfähige Schicht für Ihren Boden.',
     focus: false,
-    intro:
-      'Der Estrich verteilt Lasten und schafft die ebene Fläche für den finalen Bodenbelag. Wir liefern Zement- und Anhydritestrich in präziser Ebenheit – abgestimmt auf Heizung und Oberboden.',
-    scope: [
-      'Zementestrich (CT)',
-      'Anhydrit-/Calciumsulfatestrich (CA)',
-      'Heizestrich über Fußbodenheizung',
-      'Ebenheit nach DIN 18202',
-      'Restfeuchtemessung vor Belegung',
-    ],
-    benefits: [
-      { title: 'Eben', text: 'Präzise Flächen nach Norm.' },
-      { title: 'Belastbar', text: 'Tragfähig für jeden Oberboden.' },
-      { title: 'Geprüft', text: 'Belegreife durch Feuchtemessung.' },
-    ],
-    image: local('7'),
+    intro: 'Zement- und Anhydritestrich in präziser Ebenheit – abgestimmt auf Heizung und Oberboden.',
+    scope: ['Zementestrich (CT)', 'Anhydritestrich (CA)', 'Heizestrich', 'Ebenheit nach DIN 18202', 'Restfeuchtemessung'],
+    image: '/6.jpeg',
   },
   {
     slug: 'oberboeden',
@@ -107,21 +56,9 @@ export const services: Service[] = [
     short: 'Vinyl, Laminat & Parkett',
     tagline: 'Der letzte Schliff, der bleibt.',
     focus: false,
-    intro:
-      'Vom robusten Vinyl bis zum edlen Parkett – wir verlegen den sichtbaren Boden sauber und passgenau. Das Finish, das Ihren Räumen Charakter gibt.',
-    scope: [
-      'Vinyl (Klick & Vollverklebung)',
-      'Laminat in allen Nutzungsklassen',
-      'Parkett – geklebt oder schwimmend',
-      'Sockelleisten & Übergangsprofile',
-      'Feinreinigung zur Übergabe',
-    ],
-    benefits: [
-      { title: 'Passgenau', text: 'Saubere Fugen und Kanten.' },
-      { title: 'Auswahl', text: 'Vinyl, Laminat oder Parkett.' },
-      { title: 'Komplett', text: 'Inklusive Leisten & Profilen.' },
-    ],
-    image: local('9'),
+    intro: 'Vom robusten Vinyl bis zum edlen Parkett – sauber und passgenau verlegt.',
+    scope: ['Vinyl (Klick & verklebt)', 'Laminat', 'Parkett', 'Sockelleisten & Profile', 'Feinreinigung'],
+    image: '/7.jpeg',
   },
   {
     slug: 'epoxidharz',
@@ -129,22 +66,9 @@ export const services: Service[] = [
     short: 'Bodenbeschichtungen',
     tagline: 'Fugenlos, belastbar, industrietauglich.',
     focus: false,
-    intro:
-      'Für Garagen, Werkstätten und Gewerbeflächen bieten Epoxidharz-Systeme eine fugenlose, chemikalien- und abriebfeste Oberfläche – langlebig und leicht zu reinigen.',
-    scope: [
-      'Untergrundvorbereitung (Fräsen/Kugelstrahlen)',
-      'Grundierung & Kratzspachtelung',
-      'Epoxidharz-Beschichtung mehrlagig',
-      'Farb- & Chip-Systeme nach Wunsch',
-      'Versiegelung für lange Haltbarkeit',
-    ],
-    benefits: [
-      { title: 'Fugenlos', text: 'Hygienisch und pflegeleicht.' },
-      { title: 'Robust', text: 'Chemikalien- & abriebfest.' },
-      { title: 'Gewerbe', text: 'Für hohe Belastung ausgelegt.' },
-    ],
-    image: local('11'),
+    intro: 'Fugenlose, chemikalien- und abriebfeste Oberflächen für Garage, Werkstatt und Gewerbe.',
+    scope: ['Untergrund fräsen/strahlen', 'Grundierung', 'Epoxidharz mehrlagig', 'Farb- & Chip-Systeme', 'Versiegelung'],
+    image: '/8.jpeg',
   },
 ]
-
-export const getService = (slug: string) => services.find((s) => s.slug === slug)
+export const getService = (s: string) => services.find(x => x.slug === s)

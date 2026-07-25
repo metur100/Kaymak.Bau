@@ -14,51 +14,38 @@ export default function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const loc = useLocation()
-  const solid = loc.pathname !== '/'
 
-  useEffect(() => setOpen(false), [loc.pathname])
+  useEffect(() => { setOpen(false) }, [loc.pathname])
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
+    const onScroll = () => setScrolled(window.scrollY > 30)
     onScroll()
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
 
   return (
-    <header className={`hdr ${scrolled ? 'hdr--scrolled' : ''} ${open ? 'hdr--open' : ''} ${solid ? 'hdr--solid' : ''}`}>
-      <div className="hdr__inner container">
-        <Link to="/" className="hdr__brand" aria-label="Kaymak Bau Startseite">
-          <span className="hdr__name">
-            Kaymak<span> Bau</span>
-          </span>
+    <header className={`nav ${scrolled ? 'nav--solid' : ''}`}>
+      <div className="wrap nav__row">
+        <Link to="/" className="nav__brand" aria-label="Kaymak Bau Startseite">
+          Kaymak<span className="nav__accent">Bau</span>
         </Link>
 
-        <nav className={`hdr__nav ${open ? 'is-open' : ''}`} aria-label="Hauptnavigation">
+        <nav className={`nav__menu ${open ? 'open' : ''}`} aria-label="Hauptnavigation">
           {nav.map((n) => (
-            <NavLink
-              key={n.to}
-              to={n.to}
-              end={n.to === '/'}
-              className={({ isActive }) => `hdr__link ${isActive ? 'is-active' : ''}`}
-            >
+            <NavLink key={n.to} to={n.to} end={n.to === '/'}
+              className={({ isActive }) => `nav__link ${isActive ? 'active' : ''}`}>
               {n.label}
             </NavLink>
           ))}
-          <Link to="/kontakt" className="btn btn--gold hdr__cta">
-            Angebot anfordern
-          </Link>
         </nav>
 
-        <button
-          type="button"
-          className={`hdr__burger ${open ? 'is-open' : ''}`}
-          aria-label="Menü umschalten"
-          aria-expanded={open}
-          onClick={() => setOpen((o) => !o)}
-        >
-          <span className="hdr__burgerline hdr__burgerline--top" />
-          <span className="hdr__burgerline hdr__burgerline--mid" />
-          <span className="hdr__burgerline hdr__burgerline--bottom" />
+        <button type="button" className={`burger ${open ? 'open' : ''}`} aria-label="Menü"
+          aria-expanded={open} onClick={() => setOpen(o => !o)}>
+          <span /><span /><span />
         </button>
       </div>
     </header>
