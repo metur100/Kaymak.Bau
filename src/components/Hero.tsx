@@ -21,8 +21,7 @@ export default function Hero() {
           <span className="hero__sub">Ihr Profi rund um den Fußboden.</span>
         </h1>
         <div className="hero__actions">
-          <Link to="/leistungen" className="btn btn--accent">Unsere Leistungen <span className="arrow">→</span></Link>
-          <Link to="/kontakt" className="btn btn--light">Kontakt aufnehmen</Link>
+          <Link to="/kontakt" className="btn btn--accent">Kontakt aufnehmen</Link>
         </div>
       </div>
     </section>

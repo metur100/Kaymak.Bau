@@ -43,6 +43,13 @@ export default function Header() {
           ))}
         </nav>
 
+        <button
+          type="button"
+          className={`nav__overlay ${open ? 'open' : ''}`}
+          aria-label="Menü schließen"
+          onClick={() => setOpen(false)}
+        />
+
         <button type="button" className={`burger ${open ? 'open' : ''}`} aria-label="Menü"
           aria-expanded={open} onClick={() => setOpen(o => !o)}>
           <span /><span /><span />
