@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import './Hero.css'
 
 export default function Hero() {
+  const base = import.meta.env.BASE_URL
+
   return (
     <section className="hero">
       <div className="hero__media">
         <video className="hero__video" autoPlay muted loop playsInline
           poster="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1920&q=80">
-          <source src="/videos/hero.mp4" type="video/mp4" />
+          <source src={`${base}videos/hero.mp4`} type="video/mp4" />
         </video>
         <div className="hero__scrim" aria-hidden="true" />
       </div>

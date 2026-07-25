@@ -12,6 +12,7 @@ import '../styles/pages.css'
 
 export default function Home() {
   useReveal()
+  const base = import.meta.env.BASE_URL
 
   return (
     <>
@@ -56,7 +57,7 @@ export default function Home() {
           <span className="kicker">Vorher · Nachher</span>
           <h2>Sehen Sie den Unterschied</h2>
         </div>
-        <div className="reveal"><BeforeAfter before="/1.jpeg" after="/2.jpeg" /></div>
+        <div className="reveal"><BeforeAfter before={`${base}1.jpeg`} after={`${base}2.jpeg`} /></div>
       </section>
 
       <section className="section section--panel">
