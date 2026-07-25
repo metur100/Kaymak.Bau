@@ -29,16 +29,18 @@ export default function Footer() {
           <h4>Kontakt</h4>
           <ul>
             <li>Kaymak Bau</li>
-            <li>Musterstraße 12</li>
-            <li>00000 Musterstadt</li>
-            <li><a href="tel:+490000000000">+49 (0) 000 000 000</a></li>
-            <li><a href="mailto:info@kaymak-bau.de">info@kaymak-bau.de</a></li>
+            <li><a href="https://maps.google.com/?q=Werner-Hilpert-Stra%C3%9Fe+12,+63128+Dietzenbach" target="_blank" rel="noreferrer">Werner-Hilpert-Straße 12, 63128 Dietzenbach</a></li>
+            <li><a href="tel:+491632051432">0163 2051432</a></li>
+            <li><a href="mailto:info@kaymakbodenverlegung.de">info@kaymakbodenverlegung.de</a></li>
+            <li><a href="https://www.instagram.com/kaymakbau/" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li>Mo–Fr 08:00–19:00</li>
+            <li>Sa 09:00–16:00 · So geschlossen</li>
           </ul>
         </div>
       </div>
       <div className="wrap ft__bar">
         <span>© {y} Kaymak Bau. Alle Rechte vorbehalten.</span>
-        <span className="ft__legal"><Link to="/kontakt">Impressum</Link><Link to="/kontakt">Datenschutz</Link></span>
+        <span className="ft__legal"><Link to="/impressum">Impressum</Link><Link to="/datenschutz">Datenschutz</Link></span>
       </div>
     </footer>
   )

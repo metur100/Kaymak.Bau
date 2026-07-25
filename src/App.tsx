@@ -10,6 +10,8 @@ import References from './pages/References'
 import ReferenceDetail from './pages/ReferenceDetail'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Impressum from './pages/Impressum'
+import Datenschutz from './pages/Datenschutz'
 import NotFound from './pages/NotFound'
 
 export default function App() {
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="/referenzen/:slug" element={<ReferenceDetail />} />
           <Route path="/ueber-uns" element={<About />} />
           <Route path="/kontakt" element={<Contact />} />
+          <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

@@ -14,22 +14,42 @@ const gewerke = [
 export default function RequestForm({ preselect }: { preselect?: string }) {
   const [step, setStep] = useState(1)
   const [sel, setSel] = useState<string[]>(preselect ? [preselect] : [])
-  const [sent, setSent] = useState(false)
   const [d, setD] = useState({ flaeche: '', plz: '', name: '', tel: '', text: '' })
   const toggle = (g: string) => setSel(s => s.includes(g) ? s.filter(x => x !== g) : [...s, g])
   const set = (k: keyof typeof d) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => setD(o => ({ ...o, [k]: e.target.value }))
 
-  if (sent) return (
-    <div className="rf rf--ok">
-      <div className="rf__check" aria-hidden="true">✓</div>
-      <h3>Danke, {d.name || 'für Ihre Anfrage'}!</h3>
-      <p>Ihre unverbindliche Anfrage ist eingegangen. Wir melden uns zeitnah.</p>
-      <p className="rf__note">Demo-Formular – für den Livebetrieb an ein Backend/E-Mail-Dienst anbinden.</p>
-    </div>
-  )
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+
+    const lines = [
+      'Hallo Kaymak Bau,',
+      '',
+      'ich möchte ein unverbindliches Angebot anfordern.',
+      '',
+      'Ausgewählte Leistungen:',
+      ...(sel.length ? sel.map(x => `- ${x}`) : ['- Keine Auswahl']),
+      '',
+      `Fläche (m²): ${d.flaeche || '-'}`,
+      `PLZ: ${d.plz || '-'}`,
+      `Name: ${d.name || '-'}`,
+      `Telefon: ${d.tel || '-'}`,
+      '',
+      'Bemerkungen:',
+      d.text || '-',
+      '',
+      'Viele Grüße',
+      d.name || '',
+    ]
+
+    const subject = `Angebotsanfrage - ${d.name || 'Website'}`
+    const body = lines.join('\n')
+    const mailto = `mailto:info@kaymakbodenverlegung.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+    window.location.href = mailto
+  }
 
   return (
-    <form className="rf" onSubmit={(e) => { e.preventDefault(); setSent(true) }}>
+    <form className="rf" onSubmit={handleSubmit}>
       <div className="rf__steps">{[1, 2, 3].map(s => <span key={s} className={`rf__dot ${step >= s ? 'on' : ''}`}>{s}</span>)}</div>
 
       {step === 1 && (

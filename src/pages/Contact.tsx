@@ -12,10 +12,11 @@ export default function Contact() {
             <span className="kicker">So erreichen Sie uns</span>
             <h2>Kaymak Bau</h2>
             <ul className="checklist" style={{ marginTop: '1.4rem' }}>
-              <li>Musterstraße 12, 00000 Musterstadt</li>
-              <li><a href="tel:+490000000000" style={{ textDecoration: 'underline' }}>+49 (0) 000 000 000</a></li>
-              <li><a href="mailto:info@kaymak-bau.de" style={{ textDecoration: 'underline' }}>info@kaymak-bau.de</a></li>
-              <li>Mo–Fr 08:00–17:00 Uhr</li>
+              <li><a href="https://maps.google.com/?q=Werner-Hilpert-Stra%C3%9Fe+12,+63128+Dietzenbach" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>Werner-Hilpert-Straße 12, 63128 Dietzenbach</a></li>
+              <li><a href="tel:+491632051432" style={{ textDecoration: 'underline' }}>0163 2051432</a></li>
+              <li><a href="mailto:info@kaymakbodenverlegung.de" style={{ textDecoration: 'underline' }}>info@kaymakbodenverlegung.de</a></li>
+              <li><a href="https://www.instagram.com/kaymakbau/" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>instagram.com/kaymakbau</a></li>
+              <li>Mo–Fr 08:00–19:00 Uhr · Sa 09:00–16:00 Uhr · So geschlossen</li>
             </ul>
             <p className="lead" style={{ marginTop: '1.2rem' }}>Zertifizierter Schlüter-BECOTEC Fachbetrieb. Deutschsprachiges Team.</p>
           </div>
