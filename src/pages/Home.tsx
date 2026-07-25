@@ -56,7 +56,7 @@ export default function Home() {
           <span className="kicker">Vorher · Nachher</span>
           <h2>Sehen Sie den Unterschied</h2>
         </div>
-        <div className="reveal"><BeforeAfter before={projects[0].before} after={projects[0].after} /></div>
+        <div className="reveal"><BeforeAfter before="/1.jpeg" after="/2.jpeg" /></div>
       </section>
 
       <section className="section section--panel">
