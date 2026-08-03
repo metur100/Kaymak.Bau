@@ -20,7 +20,7 @@ export const services: Service[] = [
     focus: true,
     intro: 'Trockene Basis für jeden Aufbau. Katja-Sprint Abdichtungsbahn & Schweißbahn – sauber verschweißt und rissfrei.',
     scope: ['Untergrundprüfung', 'Katja-Sprint Abdichtungsbahn', 'Schweißbahn verschweißt', 'Wand- & Durchdringungsanschlüsse', 'Dichtigkeitsprüfung'],
-    image: `${base}3.jpeg`,
+    image: `${base}Schweißbahn.png`,
   },
   {
     slug: 'waermedaemmung',
@@ -30,7 +30,7 @@ export const services: Service[] = [
     focus: true,
     intro: 'Effiziente Dämmung mit Tackerplatte und Rolljet – lückenlos verlegt als perfekte Basis für die Fußbodenheizung.',
     scope: ['Passende Dämmstärken', 'Tackerplatten-System', 'Rolljet-Verlegesystem', 'Trittschall & Wärme kombiniert', 'Vorbereitung Heizung'],
-    image: `${base}4.jpeg`,
+    image: `${base}5.jpeg`,
   },
   {
     slug: 'fussbodenheizung',
@@ -40,7 +40,7 @@ export const services: Service[] = [
     focus: true,
     intro: 'Zertifizierter Schlüter-BECOTEC Fachbetrieb. Tacker-, Noppen- oder BECOTEC-System – hocheffizient und gleichmäßig.',
     scope: ['Systemberatung', 'Tackersystem', 'Noppensystem', 'Schlüter-BECOTEC', 'Druckprüfung & Protokoll'],
-    image: `${base}5.jpeg`,
+    image: `${base}Fußbodenheizung.png`,
   },
   {
     slug: 'estricharbeiten',
@@ -50,7 +50,7 @@ export const services: Service[] = [
     focus: false,
     intro: 'Zement- und Anhydritestrich in präziser Ebenheit – abgestimmt auf Heizung und Oberboden.',
     scope: ['Zementestrich (CT)', 'Anhydritestrich (CA)', 'Heizestrich', 'Ebenheit nach DIN 18202', 'Restfeuchtemessung'],
-    image: `${base}6.jpeg`,
+    image: `${base}Estrich.png`,
   },
   {
     slug: 'oberboeden',
@@ -60,7 +60,7 @@ export const services: Service[] = [
     focus: false,
     intro: 'Vom robusten Vinyl bis zum edlen Parkett – sauber und passgenau verlegt.',
     scope: ['Vinyl (Klick & verklebt)', 'Laminat', 'Parkett', 'Sockelleisten & Profile', 'Feinreinigung'],
-    image: `${base}7.jpeg`,
+    image: `${base}Vinyl.png`,
   },
   {
     slug: 'epoxidharz',
@@ -70,7 +70,7 @@ export const services: Service[] = [
     focus: false,
     intro: 'Fugenlose, chemikalien- und abriebfeste Oberflächen für Garage, Werkstatt und Gewerbe.',
     scope: ['Untergrund fräsen/strahlen', 'Grundierung', 'Epoxidharz mehrlagig', 'Farb- & Chip-Systeme', 'Versiegelung'],
-    image: `${base}8.jpeg`,
+    image: `${base}Epoxidharz.png`,
   },
 ]
 export const getService = (s: string) => services.find(x => x.slug === s)
