@@ -31,6 +31,7 @@ export const projects: Project[] = [
     projectLink: 'https://share.google/XkAfcNaYNBzlvNwZW',
     gallery: [
       { type: 'image', src: `${base}asb.jpg`, alt: 'ASB Rettungswache Frankfurt' },
+      { type: 'image', src: `${base}asb2.jpeg`, alt: 'ASB Rettungswache Frankfurt Bild 2' },
     ],
   },
   {

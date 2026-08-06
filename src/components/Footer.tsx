@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 import { services } from '../data/services'
 import './Footer.css'
 export default function Footer() {
+  const base = import.meta.env.BASE_URL
   const y = new Date().getFullYear()
   return (
     <footer className="ft">
       <div className="wrap ft__grid">
         <div>
-          <div className="ft__brand">Kaymak<span>Bau</span></div>
+          <div className="ft__brand"><img className="ft__logo" src={`${base}logo.png`} alt="Kaymak Bau" /></div>
           <p className="ft__slogan">Ihr Profi rund um den Fußboden.</p>
           <p className="ft__cert">Zertifizierter Schlüter-BECOTEC Fachbetrieb</p>
           <Link to="/kontakt" className="btn btn--accent ft__cta">Angebot anfordern</Link>

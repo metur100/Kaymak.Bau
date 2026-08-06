@@ -17,7 +17,7 @@ export default function BeforeAfter({ before, after, alt = 'Vorher-Nachher' }: P
       onMouseLeave={() => (drag.current = false)}
       onTouchMove={(e) => set(e.touches[0].clientX)}>
       <img className="ba__after" src={after} alt={`${alt} nachher`} loading="lazy" />
-      <div className="ba__clip" style={{ width: `${pos}%` }}>
+      <div className="ba__clip" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}>
         <img className="ba__before" src={before} alt={`${alt} vorher`} loading="lazy" />
         <span className="ba__lbl ba__lbl--l">Vorher</span>
       </div>

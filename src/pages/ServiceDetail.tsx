@@ -16,27 +16,31 @@ export default function ServiceDetail() {
         <span className="kicker">Leistung</span><h1>{s.title}</h1><p className="lead">{s.tagline}</p>
       </div></header>
 
-      <section className="section wrap"><img className="dhero__cover reveal" src={s.image} alt={s.title} /></section>
+      <section className="section"><div className="wrap"><img className="dhero__cover reveal" src={s.image} alt={s.title} /></div></section>
 
-      <section className="section wrap" style={{ paddingTop: 0 }}>
-        <div className="dlayout">
-          <div className="reveal">
-            <h2>Kurz erklärt</h2>
-            <p className="lead" style={{ marginTop: '1rem' }}>{s.intro}</p>
-            <h3 style={{ marginTop: '2.2rem' }}>Leistungsumfang</h3>
-            <ul className="checklist">{s.scope.map(x => <li key={x}>{x}</li>)}</ul>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="dlayout">
+            <div className="reveal">
+              <h2>Kurz erklärt</h2>
+              <p className="lead" style={{ marginTop: '1rem' }}>{s.intro}</p>
+              <h3 style={{ marginTop: '2.2rem' }}>Leistungsumfang</h3>
+              <ul className="checklist">{s.scope.map(x => <li key={x}>{x}</li>)}</ul>
+            </div>
+            <aside className="aside reveal">
+              <h4>Nächste Schritte</h4>
+              <p style={{ marginBottom: '1.2rem' }}>Kostenloses Angebot in 30 Sekunden anfragen.</p>
+              <Link to="/kontakt" className="btn btn--accent" style={{ width: '100%' }}>Angebot anfordern</Link>
+            </aside>
           </div>
-          <aside className="aside reveal">
-            <h4>Nächste Schritte</h4>
-            <p style={{ marginBottom: '1.2rem' }}>Kostenloses Angebot in 30 Sekunden anfragen.</p>
-            <Link to="/kontakt" className="btn btn--accent" style={{ width: '100%' }}>Angebot anfordern</Link>
-          </aside>
         </div>
       </section>
 
-      <section className="section wrap" style={{ paddingTop: 0 }}>
-        <h4 style={{ marginBottom: '1rem', color: 'var(--muted)', letterSpacing: '.14em', textTransform: 'uppercase', fontSize: '.78rem', fontFamily: 'var(--font-body)' }}>Weitere Leistungen</h4>
-        <div className="pills">{services.filter(x => x.slug !== s.slug).map(x => <Link key={x.slug} to={`/leistungen/${x.slug}`} className="pill">{x.title}</Link>)}</div>
+      <section className="section" style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <h4 style={{ marginBottom: '1rem', color: 'var(--muted)', letterSpacing: '.14em', textTransform: 'uppercase', fontSize: '.78rem', fontFamily: 'var(--font-body)' }}>Weitere Leistungen</h4>
+          <div className="pills">{services.filter(x => x.slug !== s.slug).map(x => <Link key={x.slug} to={`/leistungen/${x.slug}`} className="pill">{x.title}</Link>)}</div>
+        </div>
       </section>
 
       <section className="section section--panel"><div className="wrap">

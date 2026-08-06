@@ -1,7 +1,7 @@
 .ft { background: var(--ink); color: rgba(255,255,255,.72); padding-top: clamp(3rem,8vw,5rem); }
 .ft__grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 2.2rem; padding-bottom: 3rem; }
-.ft__brand { font-family: var(--font-display); font-size: 1.8rem; color: #fff; }
-.ft__brand span { color: var(--accent); }
+.ft__brand { margin-bottom: .2rem; }
+.ft__logo { height: 240px; width: auto; display: block; filter: brightness(0) invert(1); margin-left: -50px; }
 .ft__slogan { margin-top: .5rem; color: #fff; font-weight: 600; }
 .ft__cert { margin-top: .8rem; color: var(--accent); font-size: .85rem; }
 .ft__cta { margin-top: 1.3rem; }

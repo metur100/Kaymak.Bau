@@ -20,24 +20,26 @@ export default function Home() {
       <Stats />
       <Marquee />
 
-      <section className="section wrap">
-        <div className="head reveal">
-          <span className="kicker">Leistungen</span>
-          <h2>Alles rund um den Boden</h2>
-          <p className="lead">Jedes Gewerk mit eigener Seite – aus einer Hand.</p>
-        </div>
-        <div className="tiles">
-          {services.map((s, i) => (
-            <Link key={s.slug} to={`/leistungen/${s.slug}`} className={`tile reveal reveal-zoga d${(i % 3) + 1}`}>
-              <img className="tile__img" src={s.image} alt={s.title} loading="lazy" />
-              <div className="tile__body">
-                {s.focus && <span className="badge">Fokus</span>}
-                <h3>{s.title}</h3>
-                <p className="tile__short">{s.short}</p>
-                <span className="tile__more">Mehr <span className="arrow">→</span></span>
-              </div>
-            </Link>
-          ))}
+      <section className="section">
+        <div className="wrap">
+          <div className="head reveal">
+            <span className="kicker">Leistungen</span>
+            <h2>Alles rund um den Boden</h2>
+            <p className="lead">Jedes Gewerk mit eigener Seite – aus einer Hand.</p>
+          </div>
+          <div className="tiles">
+            {services.map((s, i) => (
+              <Link key={s.slug} to={`/leistungen/${s.slug}`} className={`tile reveal reveal-zoga d${(i % 3) + 1}`}>
+                <img className="tile__img" src={s.image} alt={s.title} loading="lazy" />
+                <div className="tile__body">
+                  {s.focus && <span className="badge">Fokus</span>}
+                  <h3>{s.title}</h3>
+                  <p className="tile__short">{s.short}</p>
+                  <span className="tile__more">Mehr <span className="arrow">→</span></span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -52,12 +54,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section wrap">
-        <div className="head reveal">
-          <span className="kicker">Vorher · Nachher</span>
-          <h2>Sehen Sie den Unterschied</h2>
+      <section className="section">
+        <div className="wrap">
+          <div className="head reveal">
+            <span className="kicker">Vorher · Nachher</span>
+            <h2>Sehen Sie den Unterschied</h2>
+          </div>
+          <div className="reveal"><BeforeAfter before={`${base}before.png`} after={`${base}after.png`} /></div>
         </div>
-        <div className="reveal"><BeforeAfter before={`${base}1.jpeg`} after={`${base}2.jpeg`} /></div>
       </section>
 
       <section className="section section--panel">
@@ -75,20 +79,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section wrap">
-        <div className="head reveal">
-          <span className="kicker">Referenzen</span>
-          <h2>Ausgewählte Projekte</h2>
+      <section className="section">
+        <div className="wrap">
+          <div className="head reveal">
+            <span className="kicker">Referenzen</span>
+            <h2>Ausgewählte Projekte</h2>
+          </div>
+          <div className="refs">
+            {projects.slice(0, 2).map((p, i) => (
+              <Link key={p.slug} to={`/referenzen/${p.slug}`} className={`ref reveal reveal-ref-arc d${i+1}`}>
+                <div className="ref__media"><span className="badge ref__cat">{p.category}</span><img src={p.cover} alt={p.title} loading="lazy" /></div>
+                <div className="ref__body"><h3>{p.title}</h3><div className="ref__meta"><span>{p.location}</span><span>{p.area}</span><span>{p.year}</span></div></div>
+              </Link>
+            ))}
+          </div>
+          <div className="reveal" style={{ marginTop: '2rem' }}><Link to="/referenzen" className="btn btn--ghost">Alle Referenzen</Link></div>
         </div>
-        <div className="refs">
-          {projects.slice(0, 2).map((p, i) => (
-            <Link key={p.slug} to={`/referenzen/${p.slug}`} className={`ref reveal reveal-ref-arc d${i+1}`}>
-              <div className="ref__media"><span className="badge ref__cat">{p.category}</span><img src={p.cover} alt={p.title} loading="lazy" /></div>
-              <div className="ref__body"><h3>{p.title}</h3><div className="ref__meta"><span>{p.location}</span><span>{p.area}</span><span>{p.year}</span></div></div>
-            </Link>
-          ))}
-        </div>
-        <div className="reveal" style={{ marginTop: '2rem' }}><Link to="/referenzen" className="btn btn--ghost">Alle Referenzen</Link></div>
       </section>
 
       <Cta />

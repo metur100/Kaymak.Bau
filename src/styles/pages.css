@@ -2,6 +2,10 @@
 .pagehead h1 { max-width: 16ch; }
 .pagehead p { margin-top: 1rem; }
 
+/* Keep a consistent visual gutter for section content across pages. */
+.section.wrap > *,
+.section > .wrap > * { margin-left: clamp(0rem, .6vw, .35rem); margin-right: clamp(0rem, .6vw, .35rem); }
+
 .head { max-width: min(100%, 56rem); margin-bottom: clamp(1.8rem,5vw,3rem); }
 .head h2 {
   margin: .55rem 0;
@@ -126,7 +130,7 @@
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.86);
-  z-index: 99;
+  z-index: 320;
   display: grid;
   place-items: center;
   padding: 2rem 1rem;

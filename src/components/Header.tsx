@@ -11,9 +11,11 @@ const nav = [
 ]
 
 export default function Header() {
+  const base = import.meta.env.BASE_URL
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const loc = useLocation()
+  const isSolid = scrolled || loc.pathname !== '/'
 
   useEffect(() => { setOpen(false) }, [loc.pathname])
   useEffect(() => {
@@ -28,10 +30,10 @@ export default function Header() {
   }, [open])
 
   return (
-    <header className={`nav ${scrolled ? 'nav--solid' : ''}`}>
+    <header className={`nav ${isSolid ? 'nav--solid' : ''}`}>
       <div className="wrap nav__row">
         <Link to="/" className="nav__brand" aria-label="Kaymak Bau Startseite">
-          Kaymak<span className="nav__accent">Bau</span>
+          <img className="nav__logo" src={`${base}logo.png`} alt="Kaymak Bau" />
         </Link>
 
         <nav className={`nav__menu ${open ? 'open' : ''}`} aria-label="Hauptnavigation">
