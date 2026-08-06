@@ -2,7 +2,7 @@
 .nav--solid { background: rgba(255,255,255,.94); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
 .nav__row { display: flex; align-items: center; justify-content: space-between; height: 78px; }
 .nav__brand { font-family: var(--font-display); font-size: 1.5rem; letter-spacing: .02em; display: flex; align-items: center; gap: .5rem; color: var(--ink); padding-top: 10px; }
-.nav__logo { height: 220px; width: auto; display: block; filter: none; }
+.nav__logo { height: 220px; width: auto; display: block; filter: none; margin-left: -36px; }
 .nav--solid .nav__logo { filter: brightness(0) saturate(100%); }
 
 .nav__menu { display: flex; align-items: center; gap: 1.8rem; }
@@ -25,7 +25,7 @@
 @media (max-width: 900px) {
   .burger { display: flex; z-index: 3; }
   .nav__row { height: 72px; }
-  .nav__brand { padding-top: 8px; margin-left: -22px; }
+  .nav__brand { padding-top: 8px; }
   .nav__logo { height: 192px; }
   .nav__logo { filter: brightness(0) saturate(100%) !important; }
   .nav--solid { background: rgba(255,255,255,.98); }
