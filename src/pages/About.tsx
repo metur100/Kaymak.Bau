@@ -13,7 +13,7 @@ export default function About() {
       <section className="section">
         <div className="wrap">
           <div className="split">
-            <div className="split__media reveal"><img src={`${base}15.jpeg`} alt="Kaymak Bau Baustelle" /></div>
+            <div className="split__media reveal"><img className="about__img" src={`${base}15.jpeg`} alt="Kaymak Bau Baustelle" /></div>
             <div className="reveal">
               <span className="kicker">Unser Anspruch</span>
               <h2>Geprüfte Qualität</h2>
