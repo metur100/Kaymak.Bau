@@ -74,7 +74,7 @@ export const projects: Project[] = [
     title: 'Feuerwehrwache',
     category: 'Öffentlicher Bau',
     location: 'Aschaffenburg', year: '2025', area: '500 m²',
-    cover: `${base}Feuerwehrwache.jpg`,
+    cover: `${base}Feuerwehrwache12.jpg`,
     description: 'Ausführung der Bodenarbeiten in einer Feuerwehrwache mit belastbaren Flächen und präziser Abstimmung auf funktionale Anforderungen.',
     scope: ['Flächenausführung über 500 m²', 'Belastbare, praxisgerechte Lösung', 'Saubere Übergänge und robuste Details'],
     projectLink: 'https://www.instagram.com/p/DXMb3ZhCOea/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
