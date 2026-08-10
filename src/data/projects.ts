@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL
 export const projects: Project[] = [
   {
     slug: 'mehrgeschossiges-gebaeude-frankfurt-westend',
-    title: 'Mehrgeschossiger Bau',
+    title: 'Mehrstöckiges Bau',
     category: 'Wohn- / Objektbau',
     location: 'Frankfurt-Westend', year: '2023', area: 'Komplettes Gebäude',
     cover: `${base}Frankfurt-Westend.jpeg`,
