@@ -1,15 +1,14 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link, Navigate, useParams } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
 import { getProject, projects } from '../data/projects'
 import Cta from '../components/Cta'
-import NotFound from './NotFound'
 import { useReveal } from '../hooks/useReveal'
 import '../styles/pages.css'
 export default function ReferenceDetail() {
   const { slug } = useParams()
   const p = getProject(slug || '')
   useReveal(slug)
-  if (!p) return <NotFound />
+  if (!p) return <Navigate to="/referenzen" replace />
   const [filter, setFilter] = useState<'all' | 'image' | 'video'>('all')
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
 
