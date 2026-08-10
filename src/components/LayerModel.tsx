@@ -4,12 +4,13 @@ import './LayerModel.css'
 const base = import.meta.env.BASE_URL
 
 const layers = [
-  { n: '1', t: 'Wärmedämmung & Tackerplatte', d: 'Dämmung & Rolljet.', c: '#8d8b8b', image: `${base}24.jpeg` },
-  { n: '2', t: 'Fußbodenheizung', d: 'Tacker, Noppen oder Schlüter-BECOTEC.', c: '#e0a11c', image: `${base}Fußbodenheizung2.png` },
-  { n: '3', t: 'Estrichschicht', d: 'Zement- oder Anhydritestrich.', c: '#9a938a', image: `${base}Estrich3.png` },
-  { n: '4', t: 'Abdichtung', d: 'Katja Sprint / Schweißbahn.', c: '#3c3831', image: `${base}Schweißbahn2.png` },
-  { n: '5', t: 'Oberboden / Beschichtung', d: 'Vinyl, Parkett oder Epoxidharz.', c: '#6b4f2a', image: `${base}BodenBeschichtung2.png` },
-  { n: '6', t: 'Parkett / Klick-Vinyl', d: 'Parkett / Klick-Vinyl.', c: '#c9b48a', image: `${base}Vinyl2.png` },]
+  { n: '1', t: 'Wärmedämmung & Tackerplatte', d: 'Tragfähige Dämm- und Trägerschicht als stabile Basis.', c: '#8d8b8b', image: `${base}24.jpeg` },
+  { n: '2', t: 'Fußbodenheizung', d: 'Verlegung im Tacker-, Noppen- oder Schlüter-BECOTEC-System.', c: '#e0a11c', image: `${base}Fußbodenheizung2.png` },
+  { n: '3', t: 'Estrichschicht', d: 'Zement- oder Anhydritestrich zur Lastverteilung und Ebenheit.', c: '#9a938a', image: `${base}Estrich3.png` },
+  { n: '4', t: 'Abdichtung', d: 'Sicherer Feuchteschutz mit Katja Sprint oder Schweißbahn.', c: '#3c3831', image: `${base}Schweißbahn2.png` },
+  { n: '5', t: 'Bodenbeschichtung', d: 'Robuste Beschichtung, z. B. mit Epoxidharz, je nach Nutzung.', c: '#6b4f2a', image: `${base}BodenBeschichtung2.png` },
+  { n: '6', t: 'Parkett / Klick-Vinyl', d: 'Alternativ hochwertiger Oberbelag aus Parkett oder Klick-Vinyl.', c: '#c9b48a', image: `${base}Vinyl2.png` },
+]
 
 export default function LayerModel() {
   const [active, setActive] = useState(2)
