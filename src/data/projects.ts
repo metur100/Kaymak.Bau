@@ -21,6 +21,34 @@ const base = import.meta.env.BASE_URL
 
 export const projects: Project[] = [
   {
+    slug: 'mehrgeschossiges-gebaeude-frankfurt-westend',
+    title: 'Mehrgeschossiger Bau',
+    category: 'Wohn- / Objektbau',
+    location: 'Frankfurt-Westend', year: '2023', area: 'Komplettes Gebäude',
+    cover: `${base}Frankfurt-Westend.jpeg`,
+    description: 'Komplettausführung der Fußbodenheizung in einem mehrgeschossigen Gebäude mit durchgängiger Verlegung auf Klett-Tackerplatten.',
+    scope: ['Fußbodenheizung komplett verlegt', 'Systemaufbau mit Klett-Tackerplatten', 'Koordinierte Ausführung über mehrere Geschosse'],
+    projectLink: '',
+    gallery: [
+      { type: 'image', src: `${base}Frankfurt-Westend.jpeg`, alt: 'Mehrgeschossiges Gebäude Frankfurt-Westend Bild 1' },
+      { type: 'image', src: `${base}Frankfurt-Westend2.png`, alt: 'Mehrgeschossiges Gebäude Frankfurt-Westend Bild 2' },
+    ],
+  },
+  {
+    slug: 'frankfurt-hauptbahnhof-komplettes-gebaeude',
+    title: 'Frankfurt Hauptbahnhof',
+    category: 'Komplettes Gebäude',
+    location: 'Frankfurt am Main', year: '2022', area: 'Komplettes Gebäude',
+    cover: `${base}hbf.jpeg`,
+    description: 'Bodenarbeiten im Bereich Frankfurt Hauptbahnhof mit kompletter Ausführung im Gebäude und abgestimmten Bauabläufen.',
+    scope: ['Komplette Ausführung im Gebäude', 'Robuste und normgerechte Bodenlösung', 'Saubere und termintreue Umsetzung'],
+    projectLink: '',
+    gallery: [
+      { type: 'image', src: `${base}hbf.jpeg`, alt: 'Frankfurt Hauptbahnhof Referenzbild 1' },
+      { type: 'image', src: `${base}hbf2.jpeg`, alt: 'Frankfurt Hauptbahnhof Referenzbild 2' },
+    ],
+  },
+  {
     slug: 'asb-rettungswache-frankfurt',
     title: 'ASB Rettungswache',
     category: 'Komplettes Gebäude',

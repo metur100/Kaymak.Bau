@@ -84,7 +84,9 @@ export default function ReferenceDetail() {
                 <div className="fact"><span>Fläche</span><span>{p.area}</span></div>
                 <div className="fact"><span>Jahr</span><span>{p.year}</span></div>
               </div>
-              <a href={p.projectLink} target="_blank" rel="noreferrer" className="btn btn--ghost" style={{ width: '100%', marginBottom: '.7rem' }}>Projekt ansehen</a>
+              {p.projectLink && (
+                <a href={p.projectLink} target="_blank" rel="noreferrer" className="btn btn--ghost" style={{ width: '100%', marginBottom: '.7rem' }}>Projekt ansehen</a>
+              )}
               <Link to="/kontakt" className="btn btn--accent" style={{ width: '100%' }}>Ähnliches anfragen</Link>
             </aside>
           </div>
