@@ -40,7 +40,7 @@ export const services: Service[] = [
     focus: true,
     intro: 'Zertifizierter Schlüter-BECOTEC Fachbetrieb. Tacker-, Noppen- oder BECOTEC-System – hocheffizient und gleichmäßig.',
     scope: ['Systemberatung', 'Tackersystem', 'Noppensystem', 'Schlüter-BECOTEC', 'Druckprüfung & Protokoll'],
-    image: `${base}Fußbodenheizung.png`,
+    image: `${base}2.jpeg`,
   },
   {
     slug: 'estricharbeiten',

@@ -33,7 +33,7 @@ export default function Header() {
     <header className={`nav ${isSolid ? 'nav--solid' : ''}`}>
       <div className="wrap nav__row">
         <Link to="/" className="nav__brand" aria-label="Kaymak Bau Startseite">
-          <img className="nav__logo" src={`${base}logo.png`} alt="Kaymak Bau" />
+          <img className="nav__logo" src={`${base}logo4.png`} alt="Kaymak Bau" />
         </Link>
 
         <nav className={`nav__menu ${open ? 'open' : ''}`} aria-label="Hauptnavigation">

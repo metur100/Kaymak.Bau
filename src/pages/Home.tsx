@@ -60,7 +60,7 @@ export default function Home() {
             <span className="kicker">Vorher · Nachher</span>
             <h2>Sehen Sie den Unterschied</h2>
           </div>
-          <div className="reveal"><BeforeAfter before={`${base}before.png`} after={`${base}after.png`} /></div>
+          <div className="reveal"><BeforeAfter before={`${base}5.jpeg`} after={`${base}6.jpeg`} /></div>
         </div>
       </section>
 
