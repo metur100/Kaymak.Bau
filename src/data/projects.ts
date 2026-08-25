@@ -21,6 +21,23 @@ const base = import.meta.env.BASE_URL
 
 export const projects: Project[] = [
   {
+    slug: 'villa-kennedy-frankfurt',
+    title: 'Villa Kennedy',
+    category: 'Premium Objekt',
+    location: 'Frankfurt', year: '2025', area: '-',
+    cover: `${base}villa-k.jpg`,
+    description: 'Hochwertige Ausführung im gehobenen Objektbereich mit Fokus auf Details, saubere Übergänge und ein präzises Endergebnis.',
+    scope: ['Untergrundvorbereitung', 'Präzise Detailausbildung', 'Saubere und termingerechte Ausführung'],
+    projectLink: 'https://www.instagram.com/reel/DIwF3gZo1Xy/?utm_source=ig_web_button_share_sheet',
+    gallery: [
+      { type: 'image', src: `${base}villa6.png`, alt: 'Villa Kennedy Referenzbild 1' },
+      { type: 'image', src: `${base}villa3.png`, alt: 'Villa Kennedy Referenzbild 2' },
+      { type: 'image', src: `${base}villa4.png`, alt: 'Villa Kennedy Referenzbild 3' },
+      { type: 'image', src: `${base}villa5.png`, alt: 'Villa Kennedy Referenzbild 4' },
+      { type: 'video', src: `${base}villavideo.mp4`, poster: `${base}villa6.png`, alt: 'Villa Kennedy Video' },
+    ],
+  },
+  {
     slug: 'mehrgeschossiges-gebaeude-frankfurt-westend',
     title: 'Mehrgeschossiges Gebäude',
     category: 'Wohn- / Objektbau',
@@ -51,7 +68,7 @@ export const projects: Project[] = [
     slug: 'asb-rettungswache-frankfurt',
     title: 'ASB Rettungswache',
     category: 'Komplettes Gebäude',
-    location: 'Frankfurt', year: '2025', area: 'Komplettes Gebäude',
+    location: 'Frankfurt', year: '2022', area: 'Komplettes Gebäude',
     cover: `${base}asb.jpg`,
     description: 'Komplette Ausführung der Bodenarbeiten in der Rettungswache, abgestimmt auf den laufenden Baustellenbetrieb und hohe Nutzungsanforderungen.',
     scope: ['Vollständiger Bodenaufbau im Gebäude', 'Koordinierte Ausführung mehrerer Gewerke', 'Robuste Ausführung für intensive Nutzung'],
@@ -61,23 +78,6 @@ export const projects: Project[] = [
       { type: 'image', src: `${base}asb2.jpeg`, alt: 'ASB Rettungswache Frankfurt Bild 2' },
       { type: 'image', src: `${base}asb3.png`, alt: 'ASB Rettungswache Frankfurt Bild 3' },
       { type: 'image', src: `${base}asb4.png`, alt: 'ASB Rettungswache Frankfurt Bild 4' },
-    ],
-  },
-  {
-    slug: 'villa-kennedy-frankfurt',
-    title: 'Villa Kennedy',
-    category: 'Premium Objekt',
-    location: 'Frankfurt', year: '2025', area: '-',
-    cover: `${base}villa6.png`,
-    description: 'Hochwertige Ausführung im gehobenen Objektbereich mit Fokus auf Details, saubere Übergänge und ein präzises Endergebnis.',
-    scope: ['Untergrundvorbereitung', 'Präzise Detailausbildung', 'Saubere und termingerechte Ausführung'],
-    projectLink: 'https://www.instagram.com/reel/DIwF3gZo1Xy/?utm_source=ig_web_button_share_sheet',
-    gallery: [
-      { type: 'image', src: `${base}villa6.png`, alt: 'Villa Kennedy Referenzbild 1' },
-      { type: 'image', src: `${base}villa3.png`, alt: 'Villa Kennedy Referenzbild 2' },
-      { type: 'image', src: `${base}villa4.png`, alt: 'Villa Kennedy Referenzbild 3' },
-      { type: 'image', src: `${base}villa5.png`, alt: 'Villa Kennedy Referenzbild 4' },
-      { type: 'video', src: `${base}villavideo.mp4`, poster: `${base}villa6.png`, alt: 'Villa Kennedy Video' },
     ],
   },
   {

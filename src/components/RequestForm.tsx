@@ -2,9 +2,9 @@ import { useState } from 'react'
 import './RequestForm.css'
 
 const gewerke = [
-  'Abdichtung (Katja Sprint / Schweißbahn)',
   'Wärmedämmung, Tackerplatte & Rolljet',
   'Fußbodenheizung (Noppen / BECOTEC)',
+  'Abdichtung (Katja Sprint / Schweißbahn)',
   'Estricharbeiten',
   'Oberboden (Vinyl/Parkett)',
   'Epoxidharz-Beschichtung',

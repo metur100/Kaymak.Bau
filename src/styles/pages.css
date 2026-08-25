@@ -73,6 +73,10 @@
   .split { grid-template-columns: 1fr; }
   .about__media { aspect-ratio: 4 / 3; }
 }
+@media (min-width: 821px) {
+  .split--contact > :first-child { order: 2; }
+  .split--contact > :last-child { order: 1; }
+}
 
 .checklist { display: flex; flex-direction: column; gap: .7rem; margin: 1.2rem 0; }
 .checklist li { display: flex; gap: .7rem; align-items: flex-start; font-weight: 600; color: var(--ink); }

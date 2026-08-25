@@ -29,7 +29,7 @@ export const services: Service[] = [
     tagline: 'Behagliche Wärme aus dem Boden.',
     focus: true,
     intro: 'Zertifizierter Schlüter-BECOTEC Fachbetrieb. Tacker-, Noppen- oder BECOTEC-System – hocheffizient und gleichmäßig.',
-    scope: ['Systemberatung', 'Tackersystem', 'Noppensystem', 'Schlüter-BECOTEC', 'Druckprüfung & Protokoll'],
+    scope: ['Verlegung gängiger Heizrohre (VA 10-30)', 'Anschluss an vormontierte Verteiler', 'Schutzrohre, Fugenprofile & Messstellenmarkierungen', 'Dichtheitsprüfung nach DIN EN 1264-4 inkl. Protokoll', 'Beschriftung der Heizkreise'],
     image: `${base}2.jpeg`,
   },
   {
@@ -48,8 +48,8 @@ export const services: Service[] = [
     short: 'Zement- & Anhydritestrich',
     tagline: 'Die tragfähige Schicht für Ihren Boden.',
     focus: false,
-    intro: 'Zement- und Anhydritestrich in präziser Ebenheit – abgestimmt auf Heizung und Oberboden.',
-    scope: ['Zementestrich (CT)', 'Anhydritestrich (CA)', 'Heizestrich', 'Ebenheit nach DIN 18202', 'Restfeuchtemessung'],
+    intro: 'Vom klassischen Estrich bis zum Spezialboden millimetergenau verlegt und perfekt abgestimmt auf Heizung und Oberboden.',
+    scope: ['Zementestrich (CT)', 'Anhydrit-Fließestrich (CA)', 'Schnellestrich', 'Sichtestrich (Designboden)', 'Heizestrich', 'Ebenheit nach DIN 18202', 'Restfeuchtemessung'],
     image: `${base}Estrich.png`,
   },
   {
