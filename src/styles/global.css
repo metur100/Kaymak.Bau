@@ -11,8 +11,8 @@
   --font-display: 'Anton', Impact, sans-serif;
   --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
 
-  --maxw: 1200px;
-  --pad: clamp(1.1rem, 5vw, 2.5rem);
+  --maxw: 100%;
+  --pad: clamp(1rem, 3vw, 2rem);
   --radius: 14px;
 }
 

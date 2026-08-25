@@ -1,6 +1,6 @@
 .stats { padding: clamp(2.8rem, 8vw, 4.5rem) 0; }
 .stats__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; text-align: center; }
 .stat__num { font-family: var(--font-display); font-size: clamp(2.6rem, 9vw, 4.5rem); color: var(--accent); line-height: 1; }
-.stat__num span { color: #fff; }
+.stat__num span { color: var(--accent); }
 .stat__lbl { margin-top: .5rem; font-size: .82rem; letter-spacing: .04em; color: rgba(255,255,255,.72); }
 @media (max-width: 720px) { .stats__grid { grid-template-columns: repeat(2, 1fr); gap: 2rem 1rem; } }

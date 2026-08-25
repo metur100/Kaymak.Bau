@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL
 export const projects: Project[] = [
   {
     slug: 'mehrgeschossiges-gebaeude-frankfurt-westend',
-    title: 'Mehrstöckiges Bau',
+    title: 'Mehrgeschossiges Gebäude',
     category: 'Wohn- / Objektbau',
     location: 'Frankfurt-Westend', year: '2023', area: 'Komplettes Gebäude',
     cover: `${base}Frankfurt-Westend.jpeg`,
@@ -45,7 +45,6 @@ export const projects: Project[] = [
     projectLink: '',
     gallery: [
       { type: 'image', src: `${base}hbf.jpeg`, alt: 'Frankfurt Hauptbahnhof Referenzbild 1' },
-      { type: 'image', src: `${base}hbf2.jpeg`, alt: 'Frankfurt Hauptbahnhof Referenzbild 2' },
     ],
   },
   {
@@ -69,15 +68,16 @@ export const projects: Project[] = [
     title: 'Villa Kennedy',
     category: 'Premium Objekt',
     location: 'Frankfurt', year: '2025', area: '-',
-    cover: `${base}villa3.png`,
+    cover: `${base}villa6.png`,
     description: 'Hochwertige Ausführung im gehobenen Objektbereich mit Fokus auf Details, saubere Übergänge und ein präzises Endergebnis.',
     scope: ['Untergrundvorbereitung', 'Präzise Detailausbildung', 'Saubere und termingerechte Ausführung'],
     projectLink: 'https://www.instagram.com/reel/DIwF3gZo1Xy/?utm_source=ig_web_button_share_sheet',
     gallery: [
-      { type: 'image', src: `${base}villa3.png`, alt: 'Villa Kennedy Referenzbild 1' },
-      { type: 'image', src: `${base}villa4.png`, alt: 'Villa Kennedy Referenzbild 2' },
-      { type: 'image', src: `${base}villa5.png`, alt: 'Villa Kennedy Referenzbild 3' },
-      { type: 'video', src: `${base}villavideo.mp4`, poster: `${base}villa3.png`, alt: 'Villa Kennedy Video' },
+      { type: 'image', src: `${base}villa6.png`, alt: 'Villa Kennedy Referenzbild 1' },
+      { type: 'image', src: `${base}villa3.png`, alt: 'Villa Kennedy Referenzbild 2' },
+      { type: 'image', src: `${base}villa4.png`, alt: 'Villa Kennedy Referenzbild 3' },
+      { type: 'image', src: `${base}villa5.png`, alt: 'Villa Kennedy Referenzbild 4' },
+      { type: 'video', src: `${base}villavideo.mp4`, poster: `${base}villa6.png`, alt: 'Villa Kennedy Video' },
     ],
   },
   {

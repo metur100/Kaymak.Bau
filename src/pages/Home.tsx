@@ -25,7 +25,7 @@ export default function Home() {
           <div className="head reveal">
             <span className="kicker">Leistungen</span>
             <h2>Alles rund um den Boden</h2>
-            <p className="lead">Jedes Gewerk mit eigener Seite – aus einer Hand.</p>
+            <p className="lead">Vom einzelnen Gewerk bis zum Komplettpaket.</p>
           </div>
           <div className="tiles">
             {services.map((s, i) => (

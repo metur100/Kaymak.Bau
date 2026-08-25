@@ -13,16 +13,6 @@ const base = import.meta.env.BASE_URL
 
 export const services: Service[] = [
   {
-    slug: 'abdichtung',
-    title: 'Abdichtung',
-    short: 'Katja Sprint & Schweißbahn',
-    tagline: 'Sicherer Schutz gegen Bodenfeuchte.',
-    focus: true,
-    intro: 'Trockene Basis für jeden Aufbau. Katja-Sprint Abdichtungsbahn & Schweißbahn – sauber verschweißt und rissfrei.',
-    scope: ['Untergrundprüfung', 'Katja-Sprint Abdichtungsbahn', 'Schweißbahn verschweißt', 'Wand- & Durchdringungsanschlüsse', 'Dichtigkeitsprüfung'],
-    image: `${base}Schweißbahn.png`,
-  },
-  {
     slug: 'waermedaemmung',
     title: 'Wärmedämmung, Tackerplatte & Rolljet',
     short: 'Dämmung & Verlegesysteme',
@@ -41,6 +31,16 @@ export const services: Service[] = [
     intro: 'Zertifizierter Schlüter-BECOTEC Fachbetrieb. Tacker-, Noppen- oder BECOTEC-System – hocheffizient und gleichmäßig.',
     scope: ['Systemberatung', 'Tackersystem', 'Noppensystem', 'Schlüter-BECOTEC', 'Druckprüfung & Protokoll'],
     image: `${base}2.jpeg`,
+  },
+  {
+    slug: 'abdichtung',
+    title: 'Abdichtung',
+    short: 'Katja Sprint & Schweißbahn',
+    tagline: 'Sicherer Schutz gegen Bodenfeuchte.',
+    focus: true,
+    intro: 'Trockene Basis für jeden Aufbau. Katja-Sprint Abdichtungsbahn & Schweißbahn – sauber verschweißt und rissfrei.',
+    scope: ['Untergrundprüfung', 'Katja-Sprint Abdichtungsbahn', 'Schweißbahn verschweißt', 'Wand- & Durchdringungsanschlüsse', 'Dichtigkeitsprüfung'],
+    image: `${base}Schweißbahn.png`,
   },
   {
     slug: 'estricharbeiten',
