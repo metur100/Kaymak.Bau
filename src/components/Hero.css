@@ -62,8 +62,8 @@
     animation: up .9s ease .24s both;
   }
   .hero__quickcontact-link {
-    width: 52px;
-    height: 52px;
+    width: 60px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
