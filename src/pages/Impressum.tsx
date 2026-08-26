@@ -7,7 +7,7 @@ export default function Impressum() {
         <div className="wrap">
           <span className="kicker">Rechtliches</span>
           <h1>Impressum</h1>
-          <p className="lead">Angaben gemaess Paragraph 5 TMG.</p>
+          <p className="lead">Angaben gemaess Paragraph 5 DDG.</p>
         </div>
       </header>
 
