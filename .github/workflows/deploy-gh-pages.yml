@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
@@ -36,7 +36,7 @@ jobs:
           REPO_NAME="${GITHUB_REPOSITORY#*/}"
           OWNER_NAME="${GITHUB_REPOSITORY%/*}"
 
-          if [ "$REPO_NAME" = "${OWNER_NAME}.github.io" ]; then
+          if [ "$REPO_NAME" = "${OWNER_NAME}.github.io" ] || [ -f "public/CNAME" ]; then
             BASE_PATH="/"
           else
             BASE_PATH="/$REPO_NAME/"
