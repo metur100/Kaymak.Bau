@@ -43,6 +43,29 @@ export default function Datenschutz() {
                 zu Servern von Google hergestellt werden.
               </p>
 
+              <h2 style={{ marginTop: '2rem' }}>Cookies &amp; Einwilligung</h2>
+              <p className="lead" style={{ marginTop: '1rem' }}>
+                Beim ersten Besuch fragen wir über ein Cookie-Banner Ihre Einwilligung ein. Ihre Auswahl wird im
+                lokalen Speicher Ihres Browsers (localStorage) gespeichert; dies ist technisch notwendig
+                (§ 25 Abs. 2 TDDDG). Alle weiteren Dienste werden nur mit Ihrer Einwilligung geladen
+                (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG). Sie können Ihre Einwilligung jederzeit mit Wirkung
+                für die Zukunft über den Link „Cookie-Einstellungen“ im Footer ändern oder widerrufen.
+              </p>
+
+              <h2 style={{ marginTop: '2rem' }}>Google Tag Manager &amp; Google Ads</h2>
+              <p className="lead" style={{ marginTop: '1rem' }}>
+                Nur nach Ihrer Einwilligung nutzen wir den Google Tag Manager sowie das Conversion-Tracking von
+                Google Ads der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Damit messen
+                wir, ob Besucher, die über eine unserer Anzeigen auf die Website gelangt sind, uns anrufen, per
+                WhatsApp kontaktieren oder das Anfrageformular absenden. Dabei werden Cookies gesetzt und Daten wie
+                IP-Adresse, Geräte- und Browserinformationen, aufgerufene Seiten sowie die genannten Interaktionen
+                an Google übermittelt. Inhalte des Formulars (Name, Telefonnummer, Nachricht) werden nicht an
+                Google übertragen. Eine Übermittlung in die USA ist möglich; Google ist unter dem
+                EU-US Data Privacy Framework zertifiziert. Wir verwenden den Google Consent Mode, sodass ohne
+                Einwilligung keine Google-Skripte geladen werden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a DSGVO.
+                Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer" style={{ textDecoration: 'underline' }}>policies.google.com/privacy</a>.
+              </p>
+
               <h2 style={{ marginTop: '2rem' }}>Formularhinweis</h2>
               <p className="lead" style={{ marginTop: '1rem' }}>
                 Das Anfrageformular auf dieser Website ist als Demo eingebunden und sendet derzeit keine Daten

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { services } from '../data/services'
+import { openConsentSettings } from '../lib/tracking'
 import './Footer.css'
 export default function Footer() {
   const base = import.meta.env.BASE_URL
@@ -41,7 +42,7 @@ export default function Footer() {
       </div>
       <div className="wrap ft__bar">
         <span>© {y} Kaymak Bau. Alle Rechte vorbehalten.</span>
-        <span className="ft__legal"><Link to="/impressum">Impressum</Link><Link to="/datenschutz">Datenschutz</Link></span>
+        <span className="ft__legal"><Link to="/impressum">Impressum</Link><Link to="/datenschutz">Datenschutz</Link><button type="button" className="ft__cookie-btn" onClick={openConsentSettings}>Cookie-Einstellungen</button></span>
       </div>
     </footer>
   )

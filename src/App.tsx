@@ -1,4 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
+import CookieBanner from './components/CookieBanner'
+import { installClickTracking, track } from './lib/tracking'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -15,8 +18,15 @@ import Datenschutz from './pages/Datenschutz'
 import NotFound from './pages/NotFound'
 
 export default function App() {
+  const { pathname } = useLocation()
+  useEffect(() => { installClickTracking() }, [])
+  useEffect(() => {
+    track('virtual_page_view', { page_path: pathname, page_title: document.title })
+  }, [pathname])
+
   return (
     <>
+      <CookieBanner />
       <ScrollProgress />
       <ScrollToTop />
       <Header />

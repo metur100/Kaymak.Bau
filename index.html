@@ -1,6 +1,48 @@
 <!doctype html>
 <html lang="de">
   <head>
+    <!-- Google Tag (GTM-TL7TTQMQ) mit Google Consent Mode v2.
+         DSGVO/TTDSG: Standard = alles abgelehnt. gtm.js wird erst geladen,
+         nachdem der Besucher im Cookie-Banner zugestimmt hat. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      window.kbLoadGoogleTag = function () {
+        if (window.kbGoogleTagLoaded) return;
+        window.kbGoogleTagLoaded = true;
+        gtag('js', new Date());
+        dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-TL7TTQMQ';
+        document.head.appendChild(s);
+      };
+      try {
+        var c = JSON.parse(localStorage.getItem('kb_consent') || 'null');
+        if (c && c.v === 1 && c.marketing) {
+          gtag('consent', 'update', {
+            ad_storage: 'granted',
+            ad_user_data: 'granted',
+            ad_personalization: 'granted',
+            analytics_storage: c.statistics ? 'granted' : 'denied'
+          });
+          window.kbLoadGoogleTag();
+        } else if (c && c.v === 1 && c.statistics) {
+          gtag('consent', 'update', { analytics_storage: 'granted' });
+          window.kbLoadGoogleTag();
+        }
+      } catch (e) {}
+    </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="/logosmall.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />

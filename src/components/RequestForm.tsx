@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { track } from '../lib/tracking'
 import './RequestForm.css'
 
 const gewerke = [
@@ -45,7 +46,13 @@ export default function RequestForm({ preselect }: { preselect?: string }) {
     const body = lines.join('\n')
     const mailto = `mailto:info@kaymakbodenverlegung.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
 
-    window.location.href = mailto
+    track('form_submit', {
+      form_name: 'angebotsanfrage',
+      services: sel.join(', '),
+      click_location: window.location.hash.replace(/^#/, '') || '/',
+    })
+    // kurz warten, damit das Conversion-Tag feuern kann, bevor der Mail-Client öffnet
+    window.setTimeout(() => { window.location.href = mailto }, 300)
   }
 
   return (
